@@ -1,4 +1,5 @@
 public class MailSender {
-    void sendMail(StudentOrder so){
+    void sendMail(StudentOrder so) {
         System.out.println("Sending Email");
+    }
 }
