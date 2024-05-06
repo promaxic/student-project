@@ -45,8 +45,8 @@ public class StudentOrderValidator {
 
     }
     static AnswerWedding checkWedding(StudentOrder so){
-        System.out.println("Wedding is running");
-        return new AnswerWedding();
+       WeddingValidator wd = new WeddingValidator();
+       return wd.checkWedding(so);
     }
     static AnswerChildren checkChildren(StudentOrder so){
         System.out.println("Children check is running");
