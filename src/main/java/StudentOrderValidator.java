@@ -40,7 +40,6 @@ public class StudentOrderValidator {
          CityRegisterValidator crv2 = new CityRegisterValidator();
          crv2.hostName = "Host2";
          AnswerCityRegister ans1 = crv1.checkCityRegister(so);
-         AnswerCityRegister ans2 = crv2.checkCityRegister(so);
          return ans1;
 
     }
@@ -49,15 +48,15 @@ public class StudentOrderValidator {
        return wd.checkWedding(so);
     }
     static AnswerChildren checkChildren(StudentOrder so){
-        System.out.println("Children check is running");
-        return new AnswerChildren();
+        ChildrenValidator cv = new ChildrenValidator();
+        return cv.checkChildren(so);
     }
     static AnswerStudent checkStudent(StudentOrder so){
-        System.out.println("Students is running");
-        return new AnswerStudent();
+        StudentValidator sv = new StudentValidator();
+        return sv.checkStudent(so);
+
     }
     static void sendMail(StudentOrder so){
-        System.out.println("Sending Email");
-
+        new MailSender().sendMail(so); // можно использовать вот такую короткую запись
     }
 }
