@@ -50,7 +50,8 @@ public class StudentOrderValidator {
     что бы люди вас понимали
      */
      public StudentOrder readStudentOrder(){
-        StudentOrder so = new StudentOrder(); // текст как комментарий
+        SaveStudentOrder.buildStudentOrder();
+        StudentOrder so = new StudentOrder();
         return so;
     }
     public AnswerCityRegister checkCityRegister(StudentOrder so){
