@@ -12,22 +12,17 @@ public class StudentOrderValidator {
 
         checkAll();
     }
-
     static void checkAll(){
-
         while (true){
             StudentOrder so = readStudentOrder();
-
             if (so == null){
                 break;
             }
-
             AnswerCityRegister cityAnswer = checkCityRegister(so);
             if (!cityAnswer.success){
                 //continue;
                 break;
             }
-
             AnswerWedding wedAnswer = checkWedding(so);
             AnswerChildren childAnswer = checkChildren(so);
             AnswerStudent studentAnswer = checkStudent(so);
@@ -48,7 +43,6 @@ public class StudentOrderValidator {
          crv1.hostName = "Host1";
          AnswerCityRegister ans1 = crv1.checkCityRegister(so);
          return ans1;
-
     }
     static AnswerWedding checkWedding(StudentOrder so){
        WeddingValidator wd = new WeddingValidator();
@@ -61,7 +55,6 @@ public class StudentOrderValidator {
     static AnswerStudent checkStudent(StudentOrder so){
         StudentValidator sv = new StudentValidator();
         return sv.checkStudent(so);
-
     }
     static void sendMail(StudentOrder so){
         new MailSender().sendMail(so); // можно использовать вот такую короткую запись
