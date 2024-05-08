@@ -7,13 +7,14 @@ public class Person {
     protected String givenName;
     private String patronymic;
     private LocalDate dateOfBirth;
+    private Address address;
 
+    public Person(){
+        System.out.println("Person is created");
+    }
     public String getPersonString(){
         return surName + " " + givenName;
     }
-
-    private Address address;
-
     public String getSurName() {
         return surName;
     }
