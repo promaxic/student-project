@@ -1,21 +1,27 @@
-package edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.domain.Other;
+
+import edu.javacourse.studentorder.domain.Person;
 
 import java.time.LocalDate;
 
-public class Adult extends Person{
-    private String passpottSeria;
+public class Adult extends Person {
+    private String passportSerial;
     private String passportNumber;
     private LocalDate issueDate;
     private String issueDepartment;
-    private String univercity;
+    private String university;
     private String studentId;
 
-    public String getPasspottSeria() {
-        return passpottSeria;
+//    public String getPersonString(){
+//        return surName + " " + givenName + ":" + passportNumber;
+//    }
+
+    public String getPassportSerial() {
+        return passportSerial;
     }
 
-    public void setPasspottSeria(String passpottSeria) {
-        this.passpottSeria = passpottSeria;
+    public void setPassportSerial(String passportSerial) {
+        this.passportSerial = passportSerial;
     }
 
     public String getPassportNumber() {
@@ -41,12 +47,12 @@ public class Adult extends Person{
     public void setIssueDepartment(String issueDepartment) {
         this.issueDepartment = issueDepartment;
     }
-    public String getUnivercity() {
-        return univercity;
+    public String getUniversity() {
+        return university;
     }
 
-    public void setUnivercity(String univercity) {
-        this.univercity = univercity;
+    public void setUniversity(String university) {
+        this.university = university;
     }
 
     public String getStudentId() {
