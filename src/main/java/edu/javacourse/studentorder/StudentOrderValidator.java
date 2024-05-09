@@ -29,8 +29,13 @@ public class StudentOrderValidator {
     }
     public void checkAll(){
         StudentOrder[] soArray = readStudentOrders();
-        for(int c = 0; c < soArray.length;c++){
-            checkOneOrder(soArray[c]);
+//        for(int c = 0; c < soArray.length;c++){
+//            System.out.println();
+//            checkOneOrder(soArray[c]);
+//        }
+        for (StudentOrder so: soArray) {
+            System.out.println();
+            checkOneOrder(so);
         }
     }
     public StudentOrder[] readStudentOrders(){
