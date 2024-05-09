@@ -18,20 +18,9 @@ public class SaveStudentOrder {
 
         return answer;
     }
-    public static StudentOrder buildStudentOrder(){
+    public static StudentOrder buildStudentOrder(long id){
         StudentOrder so = new StudentOrder();
-        Adult husband = new Adult();
-
-        Person p = new Person();
-
-   //     husband.setGivenName("Андрей");
-    //    husband.setSurName("Петров");
-   //     husband.setPassportNumber("123456");
-  //      so.setHusband(husband);
-
-
-     //   String ans = husband.getPersonString();
-    //    System.out.println(ans);
+        so.setStudentOrderId(id);
 
         return so;
     }
