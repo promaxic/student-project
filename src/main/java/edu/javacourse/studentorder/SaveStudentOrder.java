@@ -6,7 +6,6 @@ import edu.javacourse.studentorder.domain.StudentOrder;
 
 public class SaveStudentOrder {
     public static void main(String[] args) {
-        buildStudentOrder();
 
        // StudentOrder so = new StudentOrder();
        // long ans = saveStudentOrder(so);

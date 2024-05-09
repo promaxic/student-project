@@ -28,11 +28,21 @@ public class StudentOrderValidator {
         sov.checkAll();
     }
     public void checkAll(){
+        StudentOrder[] soArray = readStudentOrders();
+        for(int c = 0; c < soArray.length;c++){
+            checkOneOrder(soArray[c]);
+        }
+    }
+    public StudentOrder[] readStudentOrders(){
+        StudentOrder[] soArray = new StudentOrder[3];
 
+        for(int c = 0;c < soArray.length;c++){
+            soArray[c] = SaveStudentOrder.buildStudentOrder(c);
+        }
+
+        return soArray;
     }
     public void checkOneOrder(StudentOrder so){
-        StudentOrder[] so = readStudentOrders();
-
         AnswerCityRegister cityAnswer = checkCityRegister(so);
 
         AnswerWedding wedAnswer = checkWedding(so);
@@ -42,15 +52,7 @@ public class StudentOrderValidator {
         sendMail(so);
 
     }
-     public StudentOrder[] readStudentOrders(){
-        StudentOrder[] soArray = new StudentOrder[3];
 
-        for(int c = 0;c < soArray.length;c++){
-            soArray[c] = SaveStudentOrder.buildStudentOrder(c);
-        }
-
-        return soArray;
-    }
     public AnswerCityRegister checkCityRegister(StudentOrder so){
          return cityRegisterVal.checkCityRegister(so);
     }
