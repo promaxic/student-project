@@ -29,7 +29,7 @@ public class StudentOrderValidator {
     }
     public void checkAll(){
         while (true){
-            StudentOrder so = readStudentOrder();
+            StudentOrder so = readStudentOrders();
             if (so == null){
                 break;
             }
@@ -49,7 +49,7 @@ public class StudentOrderValidator {
     текущей операции для того.
     что бы люди вас понимали
      */
-     public StudentOrder readStudentOrder(){
+     public StudentOrder readStudentOrders(){
         SaveStudentOrder.buildStudentOrder();
         StudentOrder so = new StudentOrder();
         return so;
