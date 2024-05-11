@@ -1,2 +1,2 @@
 <HEAD><B>Project for training</B></HEAD>
-<B>it's just a learning project</B>
+<body><B><h><p>it's just a learning project</p></h></B></body>
