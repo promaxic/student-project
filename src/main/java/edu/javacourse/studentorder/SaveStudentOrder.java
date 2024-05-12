@@ -24,7 +24,7 @@ public class SaveStudentOrder {
         StudentOrder so1 = so;
         printStudentOrder(so1);
 
-      // Adult husband = new Adult("Васильев","Андрей","Петрович",null);
+        Adult husband = new Adult("Васильев","Андрей","Петрович",null);
 
         return so;
     }
