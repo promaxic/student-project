@@ -1,4 +1,5 @@
 package edu.javacourse.studentorder.domain;
 
-public class AnswerStudent {
+public class AnswerStudent
+{
 }

@@ -19,6 +19,7 @@ public abstract class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
+
     public void setSurName(String surName) {
         this.surName = surName;
     }
@@ -54,4 +55,5 @@ public abstract class Person {
     public void setAddress(Address address) {
         this.address = address;
     }
+
 }
