@@ -6,6 +6,7 @@ import edu.javacourse.studentorder.validator.ChildrenValidator;
 import edu.javacourse.studentorder.validator.CityRegisterValidator;
 import edu.javacourse.studentorder.validator.StudentValidator;
 import edu.javacourse.studentorder.validator.WeddingValidator;
+import edu.javacourse.studentorder.domain.StudentOrder;
 
 public class StudentOrderValidator {
 
