@@ -61,6 +61,7 @@ public class SaveStudentOrder
         so.setHusband(husband);
         so.setWife(wife);
         so.addChild(child1);
+        so.addChild(child2);
 
         return so;
     }

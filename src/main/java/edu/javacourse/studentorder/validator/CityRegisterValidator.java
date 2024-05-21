@@ -29,16 +29,16 @@ public class CityRegisterValidator {
 
             List<Child> children = so.getChildren();
             for(int  i = 0; i<so.getChildren().size(); i++) {
-                CityRegisterCheckerResponse cans = personChecker.checkPerson(children().get(i));
+                CityRegisterCheckerResponse cans = personChecker.checkPerson(children.get(i));
             }
 
             for(Iterator<Child> it = children.iterator(); it.hasNext(); ){
                 Child child = it.next();
-                CityRegisterCheckerResponse cans = personChecker.checkPerson(Child);
+                CityRegisterCheckerResponse cans = personChecker.checkPerson(child);
            }
 
-            for(Child child : children){
-                CityRegisterCheckerResponse cans = personChecker.checkPerson(so.getChildren().get(i));
+            for (Child child : children) {
+                CityRegisterCheckerResponse cans = personChecker.checkPerson(child);
             }
 
         }catch (CityRegisterException ex){
