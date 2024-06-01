@@ -1,8 +1,10 @@
-package edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.wedding;
+
+import edu.javacourse.studentorder.wedding.Adult;
+import edu.javacourse.studentorder.wedding.Child;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class StudentOrder

@@ -1,4 +1,4 @@
-package edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.wedding;
 
 public class Address {
     private String postCode;

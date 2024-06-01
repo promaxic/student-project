@@ -1,4 +1,6 @@
-package edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.wedding;
+
+import edu.javacourse.studentorder.wedding.Address;
 
 import java.time.LocalDate;
 
