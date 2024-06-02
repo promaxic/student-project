@@ -1,5 +1,6 @@
 package edu.javacourse.studentorder.validator.register;
 
+import edu.javacourse.studentorder.exception.TransportException;
 import edu.javacourse.studentorder.wedding.Adult;
 import edu.javacourse.studentorder.wedding.Child;
 import edu.javacourse.studentorder.register.CityRegisterResponse;
@@ -14,15 +15,17 @@ public class FakeCityRegisterChecker implements CityRegisterChecker
     private static final String BAD_2 = "2001";
     private static final String ERROR_1 = "1002";
     private static final String ERROR_2 = "2002";
+    private static final String ERROR_T_1 = "1003";
+    private static final String ERROR_T_2 = "2003";
 
     public CityRegisterResponse checkPerson(Person person)
-            throws CityRegisterException {
+            throws CityRegisterException, TransportException {
 
         CityRegisterResponse res = new CityRegisterResponse();
 
         if (person instanceof Adult) {
             Adult t = (Adult) person;
-            String ps = t.getPassportSerial();
+            String ps = t.getPassportSeria();
             if (ps.equals(GOOD_1) || ps.equals(GOOD_2)) {
                 res.setExisting(true);
                 res.setTemporal(false);
@@ -31,18 +34,22 @@ public class FakeCityRegisterChecker implements CityRegisterChecker
                 res.setExisting(false);
             }
             if (ps.equals(ERROR_1) || ps.equals(ERROR_2)) {
-                CityRegisterException ex = new CityRegisterException("Fake ERROR " + ps);
+                CityRegisterException ex =
+                        new CityRegisterException("1", "GRN ERROR " + ps);
+                throw ex;
+            }
+            if (ps.equals(ERROR_T_1) || ps.equals(ERROR_T_2)) {
+                TransportException ex =
+                        new TransportException("Transport ERROR " + ps);
                 throw ex;
             }
         }
 
-        if(person instanceof Child) {
+        if (person instanceof Child) {
             res.setExisting(true);
             res.setTemporal(true);
         }
-
         System.out.println(res);
-
         return res;
     }
 }
